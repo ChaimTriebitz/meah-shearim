@@ -1,0 +1,62 @@
+:root {
+   /* COLORS */
+   --html-theme: dark;
+   --body-color: #eee;
+
+   --color1: #282828;
+   --color2: #323232;
+   --color3: #4A55A2;
+   --color4: #303265;
+   --color5: #000120;
+   --color6: #1B1A2E;
+   --color7: #00023A;
+   --color8: #242424;
+   --color9: #090A2B;
+
+   --color-yellow1: #F0AD4E;
+   --color-orange1: #FF7A00;
+   --color-red1: #9C0000;
+   --color-red2: #D70026;
+   --color-green1: #026600;
+   --color-green2: #639F62;
+}
+
+$c1: #282828;
+$c2: #323232;
+$c3: #7B61FF;
+$c4: #303265;
+$c5: #000120;
+$c6: #1B1A2E;
+$c7: #00023A;
+$c8: #242424;
+$c9: #090A2B;
+
+$text-dark: #121212;
+
+
+$orange-light: #F0AD4E;
+$orange-dark: #FF7A00;
+$red-light: #D70026;
+$red-dark: #9C0000;
+$green-dark: #026600;
+$green-light: #639F62;
+
+$red-orange-green-colors: (
+   'orange-dark':$orange-dark,
+   'orange-light':$orange-light,
+   'red-dark':$red-dark ,
+   'red-light':$red-light ,
+   'green-dark':$green-dark ,
+   'green-light':$green-light ,
+);
+
+$base-colors: (
+   '1':$c1,
+   '2':$c2,
+   '3':$c3,
+   '4':$c4,
+   '5':$c5,
+   '6':$c6,
+   '7':$c7,
+   '8':$c8,
+);
