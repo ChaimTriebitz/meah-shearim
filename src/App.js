@@ -1,65 +1,69 @@
 import { svgs } from './assets/svgs'
 import logo from './assets/imgs/logo-transparent.png'
-import headerBanner from './assets/imgs/1.png'
 import headerImg from './assets/imgs/2.png'
-
-import mainBanner from './assets/imgs/4.png'
-import mainImg from './assets/imgs/3.png'
 import wave from './assets/imgs/wave.png'
+import mainImg from './assets/imgs/3.png'
 
 function App() {
 
    return (
       <div className="App" >
          <header className='header cmp'>
-            <img className='banner' src={headerBanner} alt="" />
-            <section className="section txt-section">
-               <div className="img">
-                  <img className='logo' src={logo} alt="logo" />
+            <section className="right">
+               <img className='logo' src={logo} alt="logo" />
+               <div className="txt">
+                  <h1>YOUR DREAM APARTMENT</h1>
+                  <span className='rec'></span>
+                  <h1>in the pulsing heart of Yerushalayim</h1>
                </div>
-
-               <h1>YOUR DREAM APARTMENT</h1>
-               <span className='rec'></span>
-               <h1>in the pulsing heart of Yerushalayim</h1>
             </section>
-            <div className="overlay">
+            <div className="img">
                <img src={headerImg} alt="" />
             </div>
          </header>
          <main className='main cmp'>
-            <img className='banner' src={mainBanner} alt="" />
-            <img className='wave' src={wave} alt="" />
             <div className="title">
-               <h1>Your best investment for</h1>
-               <h1>long-term housing or short-term rentals</h1>
+               <img src={wave} alt="" />
+               <div className="txt">
+                  <h1>Your best investment for</h1>
+                  <h1>long-term housing or short-term rentals</h1>
+               </div>
             </div>
-            <div className="sub-title">
-               <h2>We are offering 16 beautifully designed 2-room units</h2>
-               <h2>across 4 floors, each finished to the highest</h2>
-               <h2>standards and providing a unique living experience</h2>
-               <h2>in the pulsing heart of chareidi Jerusalem</h2>
-            </div>
+
+
+
             <div className="cards">
-               <div className="card spacer" />
-               <div className="card">
-                  <b>State-of-the-art design</b>
-                  <p>Superior finishing ensures comfort and elegance</p>
+               <div className="row">
+                  <div className="sub-title ">
+                     <h2>We are offering 16 beautifully designed 2-room units</h2>
+                     <h2>across 4 floors, each finished to the highest</h2>
+                     <h2>standards and providing a unique living experience</h2>
+                     <h2>in the pulsing heart of chareidi Jerusalem</h2>
+                  </div>
+                  <div className="card">
+                     <b>State-of-the-art design</b>
+                     <p>Superior finishing ensures comfort and elegance</p>
+                  </div>
                </div>
-               <div className="card">
-                  <b>Customization</b>
-                  <p>Opportunity for upgrades according to personal taste</p>
+               <div className="row">
+                  <div className="card">
+                     <b>Customization</b>
+                     <p>Opportunity for upgrades according to personal taste</p>
+                  </div>
+                  <div className="card">
+                     <b>Modern Amenities</b>
+                     <p>Balcony, safe room, elevator</p>
+                  </div>
                </div>
-               <div className="card">
-                  <b>Modern Amenities</b>
-                  <p>Balcony, safe room, elevator</p>
-               </div>
-               <div className="card">
-                  <b>Stunning Views</b>
-                  <p>Upper units offer awe-inspiring views of Jerusalem including the Old City</p>
-               </div>
-               <div className="card">
-                  <b>Prime Location</b>
-                  <p>Experience the most vibrant, authentic part of Jerusalem</p>
+               <div className="row">
+                  <div className="card">
+                     <b>Stunning Views</b>
+                     <p>Upper units offer awe-inspiring views of Jerusalem including the Old City</p>
+                  </div>
+                  <div className="card">
+                     <b>Prime Location</b>
+                     <p>Experience the most vibrant, authentic part of Jerusalem</p>
+                  </div>
                </div>
             </div>
             <div className="overlay">
@@ -97,26 +101,6 @@ function App() {
                </div>
             </section>
          </footer>
-         {/* <div className='cmp one'>
-            <section className="section txt-section">
-               <i className='logo'></i>
-               <h1>YOUR DREAM APARTMENT</h1>
-               <span className='rec'></span>
-               <h1>in the pulsing heart of Yerushalayim</h1>
-            </section>
-            <section className="section-two img-section">
-            </section>
-         </div>
-         <div className='cmp two'>
-            <section className="section txt-section">
-               <i className='logo'></i>
-               <h1>YOUR DREAM APARTMENT</h1>
-               <span className='rec'></span>
-               <h1>in the pulsing heart of Yerushalayim</h1>
-            </section>
-            <section className="section-two img-section">
-            </section>
-         </div> */}
       </div>
    )
 }
