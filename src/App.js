@@ -1,26 +1,29 @@
 import { svgs } from './assets/svgs'
 import logo from './assets/imgs/logo-transparent.png'
-import headerImg from './assets/imgs/2.png'
+import headerImg from './assets/imgs/header-img.png'
 import wave from './assets/imgs/wave.png'
-import mainImg from './assets/imgs/3.png'
+import mainImg from './assets/imgs/main-img.png'
 
 function App() {
 
    return (
       <div className="App" >
          <header className='header cmp'>
-            <section className="right">
+            <section className="left">
                <img className='logo' src={logo} alt="logo" />
                <div className="txt">
-                  <h1>YOUR DREAM APARTMENT</h1>
+                  <h1>YOUR DREAM</h1>
+                  <h1>APARTMENT</h1>
                   <span className='rec'></span>
-                  <h1>in the pulsing heart of Yerushalayim</h1>
+                  <h1>in the pulsing heart</h1>
+                  <h1>of Yerushalayim</h1>
                </div>
             </section>
             <div className="img">
                <img src={headerImg} alt="" />
             </div>
          </header>
+
          <main className='main cmp'>
             <div className="title">
                <img src={wave} alt="" />
@@ -29,9 +32,6 @@ function App() {
                   <h1>long-term housing or short-term rentals</h1>
                </div>
             </div>
-
-
-
             <div className="cards">
                <div className="row">
                   <div className="sub-title ">
@@ -66,7 +66,7 @@ function App() {
                   </div>
                </div>
             </div>
-            <div className="overlay">
+            <div className="img">
                <img src={mainImg} alt="" />
             </div>
             <div className="ribbon">
