@@ -27,19 +27,7 @@
    background-image: url('../assets/imgs/1.png');
    // max-height: 900px;
 
-   .logo {
-      height: 40%;
 
-      img {
-         padding: 1em 1.5em;
-         // max-height: 150px;
-
-         @media (max-width:500px) {
-            padding: 0.5em 0.75em;
-            // min-height: 75px;
-         }
-      }
-   }
 
    .img {
       flex-basis: 60%;
@@ -60,26 +48,49 @@
       flex-direction: column;
       flex-basis: 40%;
       gap: 0;
+
+      .txt {
+         height: 60%;
+         flex-direction: column;
+         align-items: center;
+         font-family: Merriweather;
+         font-size: 2.5vw;
+         font-weight: 900;
+         color: $gold1;
+         text-align: center;
+         white-space: nowrap;
+
+         .rec {
+            height: 3.5px;
+            width: 20vw;
+            background: $gradient;
+         }
+      }
+
+      .logo {
+         height: 40%;
+         @media (min-width:1000px) {
+            height: 30%;
+         }
+         @media (min-width:1400px) {
+            height: 25%;
+         }
+
+         img {
+            padding: 1em 1.5em;
+            // max-height: 150px;
+
+            @media (max-width:500px) {
+               padding: 0.5em 0.75em;
+            }
+         }
+      }
+
+
+
    }
 
-   .txt {
-      height: 60%;
 
-      flex-direction: column;
-      align-items: center;
-      // justify-content: center;
-      font-family: Merriweather;
-      font-size: 2.5vw;
-      color: $gold1;
-      text-align: center;
-      white-space: nowrap;
-   }
-
-   .rec {
-      height: 3.5px;
-      width: 20vw;
-      background: $gradient;
-   }
 
 }
 
@@ -90,7 +101,7 @@
 
    .img {
       position: absolute;
-      top: 25%;
+      top: 30%;
       bottom: 15%;
       left: -15%;
       width: 66.66%;
@@ -128,7 +139,7 @@
    .sub-title {
       flex-direction: column;
       color: white;
-      font-size: 1.8vw;
+      white-space: nowrap;
    }
 
 
@@ -138,13 +149,20 @@
       z-index: 9999;
       color: black;
       font-family: Poppins;
-      padding: 0% 15% 7.5% 7.5%;
+      width: 90%;
+      max-width: 1000px;
+      margin: auto;
+      margin-bottom: 10%;
+      font-size: 2vw;
+
+      @media (min-width: 1350px) {
+         font-size: 1.35vw;
+      }
    }
 
    .row {
       justify-content: end;
       height: 33.33%;
-      font-size: 1.7vw;
       gap: 5%;
    }
 
@@ -170,7 +188,7 @@
       width: 65%;
       align-self: end;
       background-color: #3498db;
-      clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 1% 100%);
+      clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 1% 100%);
       gap: 0;
       padding: 1em;
       font-size: 1.7vw;
@@ -184,9 +202,13 @@
       background: black;
       flex-direction: column;
       gap: 2em;
+      font-size: 2.5vw;
+
+      @media (min-width: 1000px) {
+         font-size: 2vw;
+      }
 
       .txt1 {
-         font-size: 2.5vw;
          flex-direction: column;
          align-self: end;
          font-family: Merriweather;
@@ -194,7 +216,6 @@
       }
 
       h1 {
-         font-size: 3vw;
          font-family: Merriweather;
          font-weight: 600;
          color: $gold1;
@@ -213,6 +234,10 @@
    font-size: 2.85vw;
    padding: 1em;
    font-family: Merriweather;
+
+   @media (min-width: 1000px) {
+      font-size: 2vw;
+   }
 
    b {
       font-weight: 600;

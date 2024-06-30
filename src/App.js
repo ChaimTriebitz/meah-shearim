@@ -39,10 +39,10 @@ function App() {
             <div className="cards">
                <div className="row">
                   <div className="sub-title ">
-                     <h2>We are offering 16 beautifully designed 2-room units</h2>
-                     <h2>across 4 floors, each finished to the highest</h2>
-                     <h2>standards and providing a unique living experience</h2>
-                     <h2>in the pulsing heart of chareidi Jerusalem</h2>
+                     <h2>We are offering 16 beautifully designed apartments</h2>
+                     <h2>Ranging from 2-room units to penthouses</h2>
+                     <h2>Each apartment is finished to the highest standards </h2>
+                     <h2>and can be customized according to your preferences</h2>
                   </div>
                   <div className="card">
                      <b>Mortgage Available</b>
