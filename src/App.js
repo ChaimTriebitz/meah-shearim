@@ -10,7 +10,9 @@ function App() {
       <div className="App" >
          <header className='header cmp'>
             <section className="left">
-               <img className='logo' src={logo} alt="logo" />
+               <div className="logo">
+                  <img  src={logo} alt="logo" />
+               </div>
                <div className="txt">
                   <h1>YOUR DREAM</h1>
                   <h1>APARTMENT</h1>

@@ -19,52 +19,59 @@
    background-size: cover;
    position: relative;
    gap: 0;
+   background-position: bottom;
 }
 
 
 .header {
    background-image: url('../assets/imgs/1.png');
-   max-height: 900px;
+   // max-height: 900px;
 
    .logo {
-      max-height: 25%;
-      min-height: 100px;
-      min-width: 150px;
-      max-width: 50%;
-      align-self: start;
-      padding: 1em 1.5em;
+      height: 40%;
+
+      img {
+         padding: 1em 1.5em;
+         // max-height: 150px;
+
+         @media (max-width:500px) {
+            padding: 0.5em 0.75em;
+            // min-height: 75px;
+         }
+      }
    }
 
    .img {
       flex-basis: 60%;
-
       justify-content: end;
       align-items: center;
       // margin-right: -15%;
       position: relative;
+
       img {
          height: 80%;
          position: absolute;
-         left: 25%;
+         top: 5%;
+         right: -5%;
       }
    }
 
    section.left {
       flex-direction: column;
       flex-basis: 40%;
+      gap: 0;
    }
 
    .txt {
-      flex: 1;
+      height: 60%;
+
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      // justify-content: center;
       font-family: Merriweather;
       font-size: 2.5vw;
       color: $gold1;
       text-align: center;
-      padding-inline: 0.5em;
-      padding-bottom: 2em;
       white-space: nowrap;
    }
 
@@ -83,10 +90,10 @@
 
    .img {
       position: absolute;
-      top: 35%;
-      bottom: 20%;
-      left: -5%;
-      width: 50%;
+      top: 25%;
+      bottom: 15%;
+      left: -15%;
+      width: 66.66%;
 
       img {
          flex: 1;
@@ -122,26 +129,23 @@
       flex-direction: column;
       color: white;
       font-size: 1.8vw;
-
-
    }
 
 
    .cards {
       flex-direction: column;
-      gap: 2em;
-
+      gap: 5%;
       z-index: 9999;
       color: black;
       font-family: Poppins;
-      padding: 0% 15% 0% 7.5%;
+      padding: 0% 15% 7.5% 7.5%;
    }
 
    .row {
       justify-content: end;
       height: 33.33%;
       font-size: 1.7vw;
-      gap: 2em;
+      gap: 5%;
    }
 
    .card {
@@ -154,9 +158,6 @@
       background: $gold1;
       box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.5);
 
-
-
-
       b {
          font-weight: 700;
       }
@@ -166,7 +167,7 @@
    .ribbon {
       color: black;
       flex-direction: column;
-      width: 60%;
+      width: 65%;
       align-self: end;
       background-color: #3498db;
       clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 1% 100%);
@@ -210,7 +211,7 @@
    align-items: center;
    background: white;
    color: black;
-   font-size: 3vw;
+   font-size: 2.85vw;
    padding: 1em;
    font-family: Merriweather;
 
