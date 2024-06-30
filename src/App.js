@@ -3,6 +3,7 @@ import logo from './assets/imgs/logo-transparent.png'
 import headerImg from './assets/imgs/header-img.png'
 import wave from './assets/imgs/wave.png'
 import mainImg from './assets/imgs/main-img.png'
+import { Form } from './Form'
 
 function App() {
 
@@ -11,7 +12,7 @@ function App() {
          <header className='header cmp'>
             <section className="left">
                <div className="logo">
-                  <img  src={logo} alt="logo" />
+                  <img src={logo} alt="logo" />
                </div>
                <div className="txt">
                   <h1>YOUR DREAM</h1>
@@ -25,6 +26,7 @@ function App() {
                <img src={headerImg} alt="" />
             </div>
          </header>
+         {/* <Form /> */}
 
          <main className='main cmp'>
             <div className="title">
@@ -43,8 +45,8 @@ function App() {
                      <h2>in the pulsing heart of chareidi Jerusalem</h2>
                   </div>
                   <div className="card">
-                     <b>State-of-the-art design</b>
-                     <p>Superior finishing ensures comfort and elegance</p>
+                     <b>Mortgage Available</b>
+                     <p>Attractive  terms</p>
                   </div>
                </div>
                <div className="row">
