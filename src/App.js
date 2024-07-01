@@ -3,7 +3,11 @@ import logo from './assets/imgs/logo-transparent.png'
 import headerImg from './assets/imgs/header-img.png'
 import wave from './assets/imgs/wave.png'
 import mainImg from './assets/imgs/main-img.png'
+import video from './assets/videos/meah-shearim.mp4'
+import ariImg from './assets/imgs/ari.jpg'
+import ariVideo from './assets/videos/ari.mp4'
 import { Form } from './Form'
+import { Footer } from './Footer'
 
 function App() {
 
@@ -51,12 +55,12 @@ function App() {
                </div>
                <div className="row">
                   <div className="card">
-                     <b>Customization</b>
+                     <a href="https://drive.google.com/file/d/1Eo-4uN91Z5S036xTX8EEd6KksoaAyTSN/view"><b>Customization</b></a>
                      <p>Opportunity for upgrades according to personal taste</p>
                   </div>
                   <div className="card">
                      <b>Modern Amenities</b>
-                     <p>Balcony, safe room, elevator</p>
+                     <p>Sukkah Balcony, Safe room (MMAD), elevator</p>
                   </div>
                </div>
                <div className="row">
@@ -85,26 +89,21 @@ function App() {
                <h1>Feel the pulse, experience the authenticity</h1>
             </div>
          </main>
-         <footer className='footer'>
-            <p>For more information,</p>
-            <b>contact Attorney Aaron Volk </b>
-            <section className='contact-us'>
-               <div className="item">
-                  {svgs.phone}
-                  <p>(617) 955-4404</p>
-                  <span>|</span>
-               </div>
-               <div className="item">
-                  {svgs.whatsapp}
-                  <p>+972 544 978899</p>
-                  <span>|</span>
-               </div>
-               <div className="item">
-                  {svgs.mail}
-                  <p>a@volk.co.il</p>
-               </div>
-            </section>
-         </footer>
+         <div className="video">
+            <video controls>
+               <source src={video} type="video/mp4" />
+               Your browser does not support the video tag.
+            </video>
+         </div>
+         <div className="ari">
+            <img src={ariImg} alt="" />
+            <video controls>
+               <source src={ariVideo} type="video/mp4" />
+               Your browser does not support the video tag.
+            </video>
+         </div>
+         <Footer />
+
       </div>
    )
 }
