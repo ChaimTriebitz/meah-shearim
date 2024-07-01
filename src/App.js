@@ -14,6 +14,7 @@ import { useRef } from 'react'
 
 
 function App() {
+   document.title = 'Meah-Shearim'
    const scrollRef = useRef(null)
    
 
