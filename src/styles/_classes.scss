@@ -265,21 +265,21 @@
       max-width: 800px;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      // @media (max-width:900px) {
+      //    max-height: 250px;
+      //    max-width: 450px;
+      // }
       @media (max-width:900px) {
          max-height: 250px;
          max-width: 450px;
       }
-      @media (max-width:900px) {
-         max-height: 250px;
-         max-width: 450px;
+      @media (max-width:700px) {
+         max-height: 200px;
+         max-width: 360px;
       }
-      @media (max-width:525px) {
-         max-height: 166.66px;
-         max-width: 300px;
-      }
-      @media (max-width:525px) {
-         max-height: 138.88px;
-         max-width: 250px;
+      @media (max-width:515px) {
+         max-height: 125px;
+         max-width: 225px;
       }
    }
 }

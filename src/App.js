@@ -8,6 +8,8 @@ import ariImg from './assets/imgs/ari.jpg'
 import ariVideo from './assets/videos/ari.mp4'
 import { Form } from './Form'
 import { Footer } from './Footer'
+// import { PDFViewer } from './PDFViewer'
+
 
 function App() {
 
@@ -103,9 +105,11 @@ function App() {
             </video>
          </div>
          <Footer />
-
+         {/* <PDFViewer /> */}
       </div>
    )
 }
 
 export default App
+
+
