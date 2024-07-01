@@ -10,6 +10,7 @@ import pdf from './assets/pdf/plans.pdf'
 import { Form } from './Form'
 import { Footer } from './Footer'
 import { useRef } from 'react'
+const googleDocsViewer = `https://docs.google.com/viewer?url=${pdf}&embedded=true`
 
 
 
@@ -114,8 +115,8 @@ function App() {
             </video>
          </div>
          <Footer />
-         <div style={{ minHeight: '100vh' }} ref={scrollRef}>
-            <iframe src={pdf} width="100%" height="100%" title="pdf-viewer">
+         <div style={{ minHeight: '50vh' }} ref={scrollRef}>
+            <iframe src={googleDocsViewer} width="100%" height="100%" title="pdf-viewer">
                <p>Your browser does not support iframes.
                   <a href={pdf}>click here to download the PDF file.</a>
                </p>
