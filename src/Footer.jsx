@@ -8,20 +8,31 @@ export const Footer = () => {
          <p>For more information,</p>
          <b>contact Attorney Aaron Volk </b>
          <div className='contact-us'>
-            <div className="item">
+            <a className="item"
+               href={`tel:6179554404`}
+               title={'call me'}
+            >
                {svgs.phone}
                <p>(617) 955-4404</p>
                <span>|</span>
-            </div>
-            <div className="item">
+            </a>
+            <a className="item"
+               href="https://wa.me/972544978899?text=meah%20shearim"
+               title={'message me'}
+
+            >
                {svgs.whatsapp}
                <p>+972 544 978899</p>
                <span>|</span>
-            </div>
-            <div className="item">
+            </a>
+            <a
+               className="item"
+               href={`mailto:a@volk.co.il`}
+               title={'mail me'}
+            >
                {svgs.mail}
                <p>a@volk.co.il</p>
-            </div>
+            </a>
          </div>
       </footer>
    )

@@ -1,4 +1,3 @@
-import { svgs } from './assets/svgs'
 import logo from './assets/imgs/logo-transparent.png'
 import headerImg from './assets/imgs/header-img.png'
 import wave from './assets/imgs/wave.png'
@@ -7,17 +6,16 @@ import video from './assets/videos/meah-shearim.mp4'
 import ariImg from './assets/imgs/ari.jpg'
 import ariVideo from './assets/videos/ari.mp4'
 import pdf from './assets/pdf/plans.pdf'
-import { Form } from './Form'
 import { Footer } from './Footer'
 import { useRef } from 'react'
-const googleDocsViewer = `https://docs.google.com/viewer?url=${pdf}&embedded=true`
+
 
 
 
 function App() {
    document.title = 'Meah-Shearim'
    const scrollRef = useRef(null)
-   
+
 
    return (
       <div className="App" >
@@ -62,14 +60,11 @@ function App() {
                   </div>
                </div>
                <div className="row">
-                  <div className="card">
+                  <button className='card' onClick={() => scrollRef.current.scrollIntoView({ behavior: 'smooth' })} >
                      {/* <a href="https://drive.google.com/file/d/1Eo-4uN91Z5S036xTX8EEd6KksoaAyTSN/view"><b>Customization</b></a> */}
-                     <button onClick={() => scrollRef.current.scrollIntoView({ behavior: 'smooth' })}>
-
-                        <b >Customization</b>
-                     </button>
+                     <b >Customization</b>
                      <p>Opportunity for upgrades according to personal taste</p>
-                  </div>
+                  </button>
                   <div className="card">
                      <b>Modern Amenities</b>
                      <p>Sukkah Balcony, Safe room (MMAD), elevator</p>
@@ -108,15 +103,14 @@ function App() {
             </video>
          </div>
          <div className="ari">
-            <img src={ariImg} alt="" />
-            <video controls>
-               <source src={ariVideo} type="video/mp4" />
+            <video controls poster={ariImg}>
+               <source src={ariVideo} type="video/mp4"  />
                Your browser does not support the video tag.
             </video>
          </div>
          <Footer />
-         <div style={{ minHeight: '50vh' }} ref={scrollRef}>
-            <iframe src={googleDocsViewer} width="100%" height="100%" title="pdf-viewer">
+         <div className='pdf' ref={scrollRef}>
+            <iframe src={pdf} width="100%" height="100%" title="pdf-viewer">
                <p>Your browser does not support iframes.
                   <a href={pdf}>click here to download the PDF file.</a>
                </p>
