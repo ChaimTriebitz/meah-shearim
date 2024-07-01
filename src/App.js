@@ -6,12 +6,16 @@ import mainImg from './assets/imgs/main-img.png'
 import video from './assets/videos/meah-shearim.mp4'
 import ariImg from './assets/imgs/ari.jpg'
 import ariVideo from './assets/videos/ari.mp4'
+import pdf from './assets/pdf/plans.pdf'
 import { Form } from './Form'
 import { Footer } from './Footer'
-// import { PDFViewer } from './PDFViewer'
+import { useRef } from 'react'
+
 
 
 function App() {
+   const scrollRef = useRef(null)
+   
 
    return (
       <div className="App" >
@@ -57,7 +61,11 @@ function App() {
                </div>
                <div className="row">
                   <div className="card">
-                     <a href="https://drive.google.com/file/d/1Eo-4uN91Z5S036xTX8EEd6KksoaAyTSN/view"><b>Customization</b></a>
+                     {/* <a href="https://drive.google.com/file/d/1Eo-4uN91Z5S036xTX8EEd6KksoaAyTSN/view"><b>Customization</b></a> */}
+                     <button onClick={() => scrollRef.current.scrollIntoView({ behavior: 'smooth' })}>
+
+                        <b >Customization</b>
+                     </button>
                      <p>Opportunity for upgrades according to personal taste</p>
                   </div>
                   <div className="card">
@@ -92,7 +100,7 @@ function App() {
             </div>
          </main>
          <div className="video">
-            <video controls>
+            <video autoPlay muted controls>
                <source src={video} type="video/mp4" />
                Your browser does not support the video tag.
             </video>
@@ -105,7 +113,13 @@ function App() {
             </video>
          </div>
          <Footer />
-         {/* <PDFViewer /> */}
+         <div style={{ minHeight: '100vh' }} ref={scrollRef}>
+            <iframe src={pdf} width="100%" height="100%" title="pdf-viewer">
+               <p>Your browser does not support iframes.
+                  <a href={pdf}>click here to download the PDF file.</a>
+               </p>
+            </iframe>
+         </div>
       </div>
    )
 }

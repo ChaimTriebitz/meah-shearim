@@ -178,6 +178,16 @@
       background: $gold1;
       box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.5);
 
+      button {
+         b {
+            width: 100%;
+            text-align: start;
+            &:hover {
+               opacity: 0.5;
+            }
+         }
+      }
+
       b {
          font-weight: 700;
       }
@@ -256,7 +266,7 @@
 
    }
 
-   video{
+   video {
       // width: auto;
    }
 
@@ -265,6 +275,7 @@
       max-width: 800px;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
       // @media (max-width:900px) {
       //    max-height: 250px;
       //    max-width: 450px;
@@ -273,10 +284,12 @@
          max-height: 250px;
          max-width: 450px;
       }
+
       @media (max-width:700px) {
          max-height: 200px;
          max-width: 360px;
       }
+
       @media (max-width:515px) {
          max-height: 125px;
          max-width: 225px;
