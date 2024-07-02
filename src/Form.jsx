@@ -22,8 +22,8 @@ export function Form() {
       const templateParams = {
          from_name: formData.name,
          from_email: formData.email,
-         message: formData.message,
          cc_email: 'gmail.com@625933', // CC email address
+         phone_number: formData.phone 
       };
 
       emailjs
