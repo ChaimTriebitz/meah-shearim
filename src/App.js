@@ -1,17 +1,22 @@
-import { svgs } from './assets/svgs'
 import logo from './assets/imgs/logo-transparent.png'
 import headerImg from './assets/imgs/header-img.png'
 
 import video from './assets/videos/meah-shearim.mp4'
 import ariImg from './assets/imgs/ari.jpg'
 import ariVideo from './assets/videos/ari.mp4'
-import { Form } from './Form'
+import pdf from './assets/pdf/plans.pdf'
 import { Footer } from './Footer'
 import { Main } from './Main'
 // import { PDFViewer } from './PDFViewer'
+import { useRef } from 'react'
+
+
 
 
 function App() {
+   document.title = 'Meah-Shearim'
+   const scrollRef = useRef(null)
+
 
    return (
       <div className="App" >
@@ -36,20 +41,25 @@ function App() {
 
          <Main />
          <div className="video">
-            <video controls>
+            <video autoPlay muted controls>
                <source src={video} type="video/mp4" />
                Your browser does not support the video tag.
             </video>
          </div>
          <div className="ari">
-            <img src={ariImg} alt="" />
-            <video controls>
-               <source src={ariVideo} type="video/mp4" />
+            <video controls poster={ariImg}>
+               <source src={ariVideo} type="video/mp4"  />
                Your browser does not support the video tag.
             </video>
          </div>
          <Footer />
-         {/* <PDFViewer /> */}
+         <div className='pdf' ref={scrollRef}>
+            <iframe src={pdf} width="100%" height="100%" title="pdf-viewer">
+               <p>Your browser does not support iframes.
+                  <a href={pdf}>click here to download the PDF file.</a>
+               </p>
+            </iframe>
+         </div>
       </div>
    )
 }

@@ -48,8 +48,11 @@
       flex-direction: column;
       flex-basis: 40%;
       gap: 0;
+      min-height: 50vw;
 
       .txt {
+   letter-spacing: 1px;
+
          height: 60%;
          flex-direction: column;
          align-items: center;
@@ -116,20 +119,15 @@
    .title {
       width: 100%;
       position: relative;
-
-
-
-      // img {
-      //    position: absolute;
-      //    inset: 0;
-      //    height: inherit;
-      // }
+      min-height: 15%;
 
       .txt {
          position: absolute;
-         inset: 0;
+         width: 100%;
          font-size: 2.5vw;
          color: $gold1;
+         background: white;
+         padding: 0.25em;
          text-align: center;
          flex-direction: column;
          gap: 0;
@@ -155,7 +153,7 @@
       max-width: 1000px;
       margin: auto;
       margin-bottom: 10%;
-      font-size: 2vw;
+      font-size: 1.75vw;
 
       @media (min-width: 1350px) {
          font-size: 1.35vw;
@@ -166,6 +164,16 @@
       justify-content: end;
       height: 33.33%;
       gap: 5%;
+
+      button {
+         text-align: left;
+         white-space: pre-wrap;
+         align-items: flex-start;
+
+         &:hover {
+            opacity: 0.5;
+         }
+      }
    }
 
    .card {
@@ -177,6 +185,8 @@
       border-radius: 20px;
       background: $gold1;
       box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.5);
+
+
 
       b {
          font-weight: 700;
@@ -232,15 +242,12 @@
 
 .video {
    background: url('../assets/imgs/4.png');
-   padding: 5%;
    justify-content: center;
    align-items: center;
 
    video {
-      width: 80%;
-      max-width: 800px;
+      width: 100%;
       border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
    }
 }
 
@@ -248,39 +255,41 @@
    background: white;
    justify-content: center;
    align-items: center;
-   padding: 1em;
+   padding: 2em 1em 0 1em;
 
    img {
       // height: 70%;
-
-
    }
 
-   video{
-      // width: auto;
+   video {
+      box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.1);
+      aspect-ratio: 295 / 165;
+      width: 90%;
+      max-width: 800px;
    }
 
    >* {
-      max-height: 350px;
-      max-width: 800px;
       border-radius: 10px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
       // @media (max-width:900px) {
       //    max-height: 250px;
       //    max-width: 450px;
       // }
-      @media (max-width:900px) {
-         max-height: 250px;
-         max-width: 450px;
-      }
-      @media (max-width:700px) {
-         max-height: 200px;
-         max-width: 360px;
-      }
-      @media (max-width:515px) {
-         max-height: 125px;
-         max-width: 225px;
-      }
+      // @media (max-width:900px) {
+      //    max-height: 250px;
+      //    max-width: 450px;
+      // }
+
+      // @media (max-width:700px) {
+      //    max-height: 200px;
+      //    max-width: 360px;
+      // }
+
+      // @media (max-width:515px) {
+      //    max-height: 125px;
+      //    max-width: 225px;
+      // }
    }
 }
 
@@ -290,15 +299,20 @@
    justify-content: center;
    align-items: center;
    background: white;
+   gap: 0.5em !important;
    color: black;
    font-size: 2.85vw;
    padding: 1em;
    font-family: Merriweather;
 
+   .item {
+      display: flex;
+      gap: 0.5em;
+   }
+
    img {
       margin-top: 2em;
       width: 25%;
-      // height: 50%;
    }
 
    @media (min-width: 1000px) {
@@ -309,10 +323,77 @@
       font-weight: 600;
    }
 
+   p:hover {
+      transform: scale(1.01);
+   }
+
    .icon {
       @media (max-width:700px) {
          width: 15px;
       }
    }
+}
 
+.pdf {
+   @media (min-width:500px) {
+      min-height: 100vh;
+   }
+}
+
+@keyframes tilt-shake {
+
+   0%,
+   20%,
+   100% {
+      transform: rotate(0deg);
+   }
+
+   10% {
+      transform: rotate(2.5deg);
+   }
+
+   15% {
+      transform: rotate(-5deg);
+   }
+
+   //  90% {
+   //    transform: rotate(5deg);
+   //  }
+}
+
+@keyframes grow {
+   0% {
+      transform: scale(1);
+   }
+
+   50% {
+      transform: scale(1.1);
+   }
+
+   100% {
+      transform: scale(1);
+   }
+}
+
+.svg-animate {
+   display: flex;
+   animation: tilt-shake 2s infinite;
+   animation-delay: 5s;
+   align-items: center;
+   &:hover{
+   animation: none;
+   }
+}
+
+.footer .contact-us .item svg {
+   transition: transform 0.3s;
+
+   &.grow {
+      animation: grow 2s infinite;
+   }
+}
+
+.footer .contact-us .item:hover svg {
+   transform: rotate(2.5deg);
+   animation: tilt-shake 2s;
 }
