@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 
 export function Form() {
    const [formData, setFormData] = useState({
-      firstName: '',
-      lastName: '',
+      name: '',
       email: '',
       phone: ''
    });
@@ -25,23 +24,12 @@ export function Form() {
    return (
       <form className="contact-form" onSubmit={handleSubmit}>
          <div className="form-group">
-            <label htmlFor="firstName">First Name</label>
+            <label htmlFor="name">Name</label>
             <input
                type="text"
-               id="firstName"
-               name="firstName"
-               value={formData.firstName}
-               onChange={handleChange}
-               required
-            />
-         </div>
-         <div className="form-group">
-            <label htmlFor="lastName">Last Name</label>
-            <input
-               type="text"
-               id="lastName"
-               name="lastName"
-               value={formData.lastName}
+               id="name"
+               name="name"
+               value={formData.name}
                onChange={handleChange}
                required
             />

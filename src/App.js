@@ -7,6 +7,7 @@ import ariVideo from './assets/videos/ari.mp4'
 import pdf from './assets/pdf/plans.pdf'
 import { Footer } from './Footer'
 import { Main } from './Main'
+import { Form } from './Form'
 // import { PDFViewer } from './PDFViewer'
 import { useRef } from 'react'
 
