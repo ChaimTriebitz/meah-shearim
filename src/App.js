@@ -10,6 +10,7 @@ import { Main } from './Main'
 import { Form } from './Form'
 // import { PDFViewer } from './PDFViewer'
 import { useRef } from 'react'
+import { Msg } from './Msg'
 
 
 
@@ -21,6 +22,7 @@ function App() {
 
    return (
       <div className="App" >
+          <Msg />
          <header className='header cmp'>
             <section className="left">
                <div className="logo">
@@ -36,7 +38,7 @@ function App() {
             </section>
             <div className="img">
                <img src={headerImg} alt="" />
-            </div>
+            </div>\
          </header>
          <Form />
 

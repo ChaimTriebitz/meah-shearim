@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import emailjs from 'emailjs-com';
+import { toastMsg } from './msgEvent';
 
 export function Form() {
    const [formData, setFormData] = useState({
@@ -17,47 +19,74 @@ export function Form() {
 
    const handleSubmit = (e) => {
       e.preventDefault();
-      // Handle form submission
-      console.log(formData);
+      const templateParams = {
+         from_name: formData.name,
+         from_email: formData.email,
+         message: formData.message,
+         cc_email: 'gmail.com@625933', // CC email address
+      };
+
+      emailjs
+         .send(
+            'service_0rvq10s', // Your service ID
+            'template_5mtq0z5', // Your template ID
+            templateParams,
+            'LT5DE1PFQwTno1Mtt' // Your user ID
+         )
+         .then(
+            (response) => {
+               console.log('SUCCESS!', response.status, response.text);
+               toastMsg.success('Email sent successfully');
+            },
+            (error) => {
+               console.log('FAILED...', error);
+               toastMsg.error(error);
+            }
+         );
+      // console.log(formData);
    };
 
    return (
-      <form className="contact-form" onSubmit={handleSubmit}>
-         <div className="form-group">
-            <label htmlFor="name">Name</label>
-            <input
-               type="text"
-               id="name"
-               name="name"
-               value={formData.name}
-               onChange={handleChange}
-               required
-            />
-         </div>
-         <div className="form-group">
-            <label htmlFor="email">Email</label>
-            <input
-               type="email"
-               id="email"
-               name="email"
-               value={formData.email}
-               onChange={handleChange}
-               required
-            />
-         </div>
-         <div className="form-group">
-            <label htmlFor="phone">Phone Number</label>
-            <input
-               type="tel"
-               id="phone"
-               name="phone"
-               value={formData.phone}
-               onChange={handleChange}
-               required
-            />
-         </div>
-         <button type="submit">Submit</button>
-      </form>
+      <div className="form">
+
+         <form onSubmit={handleSubmit}>
+            <div className="group">
+               <label htmlFor="name">Name</label>
+               <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+               />
+            </div>
+            <div className="group">
+               <label htmlFor="email">Email</label>
+               <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+               />
+            </div>
+            <div className="group">
+               <label htmlFor="phone">Phone Number</label>
+               <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  required
+               />
+            </div>
+            <button type="submit">Submit</button>
+         </form>
+      </div>
+
    );
 }
 
