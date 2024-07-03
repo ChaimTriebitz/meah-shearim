@@ -6,7 +6,6 @@
    background-repeat: no-repeat;
 
    .btn {
-      opacity: 0.85;
       min-width: 125px;
       min-height: 35px;
       margin-top: 1em;
@@ -17,10 +16,25 @@
       align-self: center;
       font-size: 1.1em;
       font-weight: 600;
+      gap: 0;
 
       &:hover {
-         opacity: 1;
+         opacity: 0.9;
       }
+
+      svg {
+         animation: upDown 1.5s infinite ease-in-out;
+
+      }
+
+      @keyframes upDown {
+         0%, 100% {
+           transform: translateY(-0.5px);
+         }
+         50% {
+           transform: translateY(2.5px);
+         }
+       }
    }
 
    form {
