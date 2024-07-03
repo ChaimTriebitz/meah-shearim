@@ -7,13 +7,15 @@
 
    .btn {
       opacity: 0.85;
+      min-width: 125px;
+      min-height: 35px;
       margin-top: 1em;
       border-radius: 25px;
       background: $gold1;
       color: white;
       padding: 0.5em 0.75em;
       align-self: center;
-      font-size: 1.75vw;
+      font-size: 1.1em;
       font-weight: 600;
 
       &:hover {

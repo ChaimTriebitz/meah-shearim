@@ -1,23 +1,20 @@
-import { useState } from 'react'
-import pdf from './assets/pdf/plans.pdf'
 
+function importAll(r) {
+   return r.keys().map(r);
+}
+
+const images = importAll(require.context('./assets/imgs/plans', false, /\.(png|jpe?g|svg)$/));
 
 
 
 export const PDF = ({ scrollRef }) => {
-   const [isLoading, setIsLoading] = useState(true)
    return (
       <div className='pdf' ref={scrollRef}>
-         <p>{isLoading ? 'Loading...' : ''}</p>
-         
-         <iframe
-            src={pdf}
-            title="PDF Viewer"
-            width="100%"
-            height="100%"
-            style={{ border: 'none' }}
-            onLoad={() => setIsLoading(false)}
-         />
+         {images.map((image, index) => (
+            <div className='img' key={index} >
+               <img src={image} alt={`Page ${index + 1}`} />
+            </div>
+         ))}
       </div>
    )
 }
