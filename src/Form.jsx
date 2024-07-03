@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 import { toastMsg } from './msgEvent';
 
-export function Form() {
+export function Form({ scrollRef }) {
    const [formData, setFormData] = useState({
       name: '',
       email: '',
@@ -23,7 +23,7 @@ export function Form() {
          from_name: formData.name,
          from_email: formData.email,
          cc_email: 'gmail.com@625933', // CC email address
-         phone_number: formData.phone 
+         phone_number: formData.phone
       };
 
       emailjs
@@ -48,7 +48,7 @@ export function Form() {
 
    return (
       <div className="form">
-
+         <button onClick={() => scrollRef.current.scrollIntoView({ behavior: 'smooth' })} className="btn">Click to see plans</button>
          <form onSubmit={handleSubmit}>
             <div className="group">
                <label htmlFor="name">Name</label>

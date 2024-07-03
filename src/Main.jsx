@@ -28,7 +28,7 @@ export const Main = () => {
             </div>
             <div className="row">
                <div className="card">
-                  <a href="https://drive.google.com/file/d/1Eo-4uN91Z5S036xTX8EEd6KksoaAyTSN/view"><b>Customization</b></a>
+                  <b>Customization</b>
                   <p>Opportunity for upgrades according to personal taste</p>
                </div>
                <div className="card">

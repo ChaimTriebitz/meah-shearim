@@ -22,8 +22,7 @@ function App() {
       <div className="App" >
          <Msg />
          <Header />
-         <Form />
-
+         <Form scrollRef={scrollRef}/>
          <Main />
          <div className="video">
             <video autoPlay muted controls>
