@@ -3,12 +3,8 @@ import emailjs from 'emailjs-com';
 import { toastMsg } from './msgEvent';
 import { svgs } from './assets/svgs';
 
-<<<<<<< HEAD
-export function Form() {
+export function Form({scrollRef}) {
    const [isSubmitted, setIsSubmitted] = useState(false)
-=======
-export function Form({ scrollRef }) {
->>>>>>> cc54a9c2ea3f528375074c75ba8240f75b27d10a
    const [formData, setFormData] = useState({
       name: '',
       email: '',
