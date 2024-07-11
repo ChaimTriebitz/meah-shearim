@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 import { toastMsg } from './msgEvent';
+import { svgs } from './assets/svgs';
 
+<<<<<<< HEAD
 export function Form() {
    const [isSubmitted, setIsSubmitted] = useState(false)
+=======
+export function Form({ scrollRef }) {
+>>>>>>> cc54a9c2ea3f528375074c75ba8240f75b27d10a
    const [formData, setFormData] = useState({
       name: '',
       email: '',
@@ -50,7 +55,7 @@ export function Form() {
 
    return (
       <div className="form">
-
+         <button onClick={() => scrollRef.current.scrollIntoView({ behavior: 'smooth' })} className="btn">Click to see plans {svgs.chevronDown}</button>
          <form onSubmit={handleSubmit}>
             <div className="group">
                <label htmlFor="name">Name</label>

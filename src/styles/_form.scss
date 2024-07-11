@@ -1,8 +1,42 @@
 .form {
+   flex-direction: column;
    background: url('../assets/imgs/1.png');
    background-position: center;
    background-size: cover;
    background-repeat: no-repeat;
+
+   .btn {
+      min-width: 125px;
+      min-height: 35px;
+      margin-top: 1em;
+      border-radius: 25px;
+      background: $gold1;
+      color: white;
+      padding: 0.5em 0.75em;
+      align-self: center;
+      font-size: 1.1em;
+      font-weight: 600;
+      gap: 0;
+
+      &:hover {
+         opacity: 0.9;
+      }
+
+      svg {
+         animation: upDown 1.5s infinite ease-in-out;
+
+      }
+
+      @keyframes upDown {
+         0%, 100% {
+           transform: translateY(-0.5px);
+         }
+         50% {
+           transform: translateY(2.5px);
+         }
+       }
+   }
+
    form {
       margin: 2em auto;
       padding: 2em;
@@ -48,9 +82,8 @@
       font-size: 1.5vw;
       align-self: flex-end;
       min-height: 25px;
-      @media (min-width:500px) {
 
-      }
+      @media (min-width:500px) {}
    }
 
    form button:hover {

@@ -1,4 +1,7 @@
 export const svgs = {
+   chevronDown: <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M16 13L12 17L8 13M16 7L12 11L8 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+   </svg>,
    wave: <svg viewBox="0 0 1041 302" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M1040.82 0.5H0V141.5C0 141.5 147.567 220 295.658 217.5C443.748 215 503.927 120.5 665.623 141.5C827.319 162.5 1040.82 301.5 1040.82 301.5V0.5Z" fill="#fff" />
    </svg>
