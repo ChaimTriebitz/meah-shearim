@@ -3,6 +3,7 @@ import emailjs from 'emailjs-com';
 import { toastMsg } from './msgEvent';
 
 export function Form() {
+   const [isSubmitted, setIsSubmitted] = useState(false)
    const [formData, setFormData] = useState({
       name: '',
       email: '',
@@ -23,7 +24,7 @@ export function Form() {
          from_name: formData.name,
          from_email: formData.email,
          cc_email: 'gmail.com@625933', // CC email address
-         phone_number: formData.phone 
+         phone_number: formData.phone
       };
 
       emailjs
@@ -36,6 +37,7 @@ export function Form() {
          .then(
             (response) => {
                console.log('SUCCESS!', response.status, response.text);
+               setIsSubmitted(true)
                toastMsg.success('Email sent successfully');
             },
             (error) => {
@@ -83,7 +85,7 @@ export function Form() {
                   required
                />
             </div>
-            <button type="submit">Submit</button>
+            <button disabled={isSubmitted} type="submit">Submit</button>
          </form>
       </div>
 
