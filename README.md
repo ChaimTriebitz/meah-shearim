@@ -12,7 +12,7 @@ This is a simple landing page built with React.js that includes a form where use
 
 ## Technologies Used
 - React.js
-- Email.js (or any backend service to handle email submissions)
+- emailjs-com
 
 ## Usage
 1. Open the app in a browser.
