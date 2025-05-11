@@ -3,7 +3,7 @@
 This is a simple landing page built with React.js that includes a form where users can leave their contact information, which will be sent to an email.
 
 ## Live Demo 🚀  
-[![🖱️ Click here to try it out!](https://img.shields.io/badge/Try%20it%20Now%20🚀-blue?style=for-the-badge)](https://freiman-font.onrender.com)
+[![🖱️ Click here to try it out!](https://img.shields.io/badge/Try%20it%20Now%20🚀-blue?style=for-the-badge)](https://www.meah-shearim.com/)
 
 ## Features
 - Responsive design
